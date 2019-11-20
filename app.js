@@ -22,7 +22,8 @@ app.use(express.static("public"));
 app.get('/', function (req, res) {
   // res.render(__dirname + '/views/home.ejs');
   res.render('home', {
-    homeContent: homeStartingContent
+    homeContent: homeStartingContent,
+    posts: postArr
   });
 });
 
@@ -48,7 +49,6 @@ app.post('/compose', function (req, res) {
     body: req.body.postBody
   };
   postArr.push(post);
-  console.log(postArr);
   res.redirect('/');
 });
 
