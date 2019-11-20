@@ -47,7 +47,7 @@ app.get('/compose', function (req, res) {
 app.post('/compose', function (req, res) {
   const post = {
     title: req.body.postTitle,
-    body: req.body.postBody
+    body: req.body.postBody,
   };
   postArr.push(post);
   res.redirect('/');
